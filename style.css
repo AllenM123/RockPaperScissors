@@ -1,0 +1,67 @@
+body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: white;
+    background-color: black;
+
+}
+
+.gameTop, .gameBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.resultTop, .scoreBottom, .endGame{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 300px 10px 300px;
+}
+
+button {
+  font-size: 50px;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-color: white;
+}
+
+#rock {
+  background-image: url("./images/rock.png");
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+#paper {
+  background-image: url("./images/paper.png");
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+#scissor {
+  background-image: url("./images/scissor.png");
+  background-size: 200px 200px;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+  img {
+    height: 200px;
+    width: 200px;
+    margin: 0;
+  }
