@@ -4,8 +4,9 @@ body {
     flex-direction: column;
     margin: 0;
     color: white;
+    text-shadow: 2px 2px black;
     background-image: url("./images/disneyland.jpg");
-    background-size: cover;
+    background-size: 110%;
     background-repeat: no-repeat;
     background-color: black;
 
@@ -23,11 +24,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .choice {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 300px 10px 300px;
+    margin: auto;
+    width: 700px;
 }
 
 button {
@@ -37,6 +40,7 @@ button {
   justify-content: center;
   align-items: end;
   border-color: white;
+  transition: all .07s ease;
 }
 
 #rock {
@@ -45,6 +49,7 @@ button {
   height: 200px;
   width: 200px;
   background-color: black;
+  display: flex;
 }
 
 #paper {
@@ -53,6 +58,7 @@ button {
   height: 200px;
   width: 200px;
   background-color: black;
+  display: flex;
 }
 
 #scissor {
@@ -61,16 +67,61 @@ button {
   height: 200px;
   width: 200px;
   background-color: black;
+  display: flex;
 }
 
-  img {
-    height: 200px;
-    width: 200px;
-    margin: 0;
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
   }
 
-.bottom {
-  display: flex;
-  justify-content: center;
-  align-items: bottom;
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    height: 40px;
+  }
+
+  .mouseSadSticker {
+    background-image: url("./images/sad.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    margin: auto;
+  }
+
+  .mouseHappySticker {
+    background-image: url("./images/happy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+  }
+
+  .playAgain {
+    font-size: 30px;
+    color: black;
+    background-color: orange;
+    height: 50px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer {
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(29, 29, 29);
   }
