@@ -15,12 +15,18 @@ let computerSelection;
     buttons.forEach(buttons => buttons.addEventListener('click', (e) => {
         playerSelection = e.target.id
         playerChoiceDisplay.innerHTML = playerSelection;
+        buttons.classList.add('playing'); //adds an animation
         computerChoice();
         playRound();
         logWins();
     }))
 
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+}
 
+buttons.forEach(buttons => buttons.addEventListener('transitionend', removeTransition));
 
 function playRound(){
     const winner = checkWinner(playerSelection, computerSelection);
@@ -74,15 +80,41 @@ function logWins() {
     // console.log("Ties: ", ties);
     if (playerWins === 5){
         endGameDisplay.innerHTML = "You WIN!";
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "mouseHappySticker")
+        document.body.appendChild(image);
+        
         document.getElementById('rock').disabled = true;
         document.getElementById('paper').disabled = true;
         document.getElementById('scissor').disabled = true;
+
+        let playAgain = document.createElement("button");
+        playAgain.setAttribute("class", "playAgain")
+        playAgain.innerHTML = "Play Again?";
+        document.body.appendChild(playAgain);
+        playAgain.addEventListener('click', (e) => {
+        location.reload();
+        })
     }
     else if (computerWins === 5){
         endGameDisplay.innerHTML = "You LOSE!";
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "mouseSadSticker");
+        document.body.appendChild(image);
+
         document.getElementById('rock').disabled = true;
         document.getElementById('paper').disabled = true;
         document.getElementById('scissor').disabled = true;
+
+        let playAgain = document.createElement("button");
+        playAgain.setAttribute("class", "playAgain")
+        playAgain.innerHTML = "Play Again?";
+        document.body.appendChild(playAgain);
+        playAgain.addEventListener('click', (e) => {
+        location.reload();
+        })
     }
     // else {
     //     console.log("Its a tie!");
