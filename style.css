@@ -4,6 +4,9 @@ body {
     flex-direction: column;
     margin: 0;
     color: white;
+    background-image: url("./images/disneyland.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: black;
 
 }
@@ -64,4 +67,10 @@ button {
     height: 200px;
     width: 200px;
     margin: 0;
+  }
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: bottom;
   }
